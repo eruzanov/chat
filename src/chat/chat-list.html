@@ -3,7 +3,7 @@
   <a
     href="#{{chat}}"
     class="chat-list__item"
-    ng-class="{active: $ctrl.selected === chat}"
+    ng-class="{active: $root.selected === chat}"
     ng-click="$ctrl.onSelect(chat)"
     ng-repeat="chat in chatList"
   >

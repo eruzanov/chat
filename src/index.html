@@ -9,7 +9,9 @@
       <chat-list></chat-list>
     </div>
     <div class="main">
-      <div class="main__header">main__header</div>
+      <div class="main__header" ng-controller="header">
+        <h2 class="main__header-title">{{$root.selected}}</h2>
+      </div>
       <div class="main__messages">
         <messages-list></messages-list>
       </div>

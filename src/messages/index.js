@@ -25,10 +25,13 @@ export const moduleName = angular
   .module('messages', [])
   .component('messagesList', {
     template: list,
-    controller: ['$scope', '$http', ($scope, $http) => {
-      $http
-        .get(`https://randomuser.me/api/?results=${COUNT}`)
-        .then(resp => $scope.messages = resp.data.results.map(prepare));
+    controller: ['$scope', '$http', '$rootScope', ($scope, $http, $rootScope) => {
+      $rootScope.$watch('selected', () => {
+        $scope.messages = [];
+        $http
+          .get(`https://randomuser.me/api/?results=${COUNT}`)
+          .then(resp => $scope.messages = resp.data.results.map(prepare))
+      });
       //todo sort by date
     }],
   }).name;

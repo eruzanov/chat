@@ -4,19 +4,23 @@ import './chat-list.css';
 
 export const moduleName = angular.module('chat', []).component('chatList', {
   template: chatList,
-  controller: function($scope) {
-    $scope.chatList = [
-      'angular',
-      'jobs',
-      'nodejs',
-      'offtopic',
-      'react',
-      'typescript',
-      'vue',
-    ];
+  controller: [
+    '$scope',
+    '$rootScope',
+    function($scope, $rootScope) {
+      $scope.chatList = [
+        'angular',
+        'jobs',
+        'nodejs',
+        'offtopic',
+        'react',
+        'typescript',
+        'vue',
+      ];
 
-    this.selected = $scope.chatList[0];
+      $rootScope.selected = $scope.chatList[0];
 
-    this.onSelect = chat => (this.selected = chat);
-  },
+      this.onSelect = chat => ($rootScope.selected = chat);
+    },
+  ],
 }).name;
