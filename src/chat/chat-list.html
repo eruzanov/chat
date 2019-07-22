@@ -1,4 +1,12 @@
 <div class="chat-list">
-    <div class="chat-list__title">Chats</div>
-    <a href="#" class="chat-list__item" ng-repeat="chat in list">{{chat}}</a>
+  <div class="chat-list__title">Chats</div>
+  <a
+    href="#{{chat}}"
+    class="chat-list__item"
+    ng-class="{active: $ctrl.selected === chat}"
+    ng-click="$ctrl.onSelect(chat)"
+    ng-repeat="chat in chatList"
+  >
+    {{chat}}
+  </a>
 </div>

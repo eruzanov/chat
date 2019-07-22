@@ -18,8 +18,13 @@
   text-decoration: none;
 }
 
+.chat-list__item.active,
+.chat-list__item.active:hover {
+  background-color: #983527;
+}
+
 .chat-list__item:hover {
-  background-color: #7a281d;
+  background-color: #70271d;
 }
 
 .chat-list__item:before {
