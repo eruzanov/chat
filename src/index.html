@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>chat</title>
+  </head>
+  <body ng-app="app">
+    <div class="sidebar">
+      <chat-list></chat-list>
+    </div>
+    <div class="main">
+      <div class="main__header">main__header</div>
+      <div class="main__messages">
+        <messages-list></messages-list>
+      </div>
+      <div class="main__send">
+        <form class="form">
+          <input
+            class="form__input"
+            type="text"
+            placeholder="write to message"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
