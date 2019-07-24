@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>chat</title>
   </head>
-  <body ng-app="bootstrap" ng-switch="$root.user">
+  <body ng-app="bootstrap" ng-switch="!!$root.user">
     <app class="screen" ng-switch-when="true"></app>
     <login-form class="screen" ng-switch-default></login-form>
   </body>

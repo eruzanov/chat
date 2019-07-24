@@ -6,16 +6,31 @@
 }
 
 .user__picture {
+  flex: 0 0 34px;
   margin: 0 10px;
   width: 34px;
   height: 34px;
+  border-radius: 50%;
+}
+
+.user__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .user__logout {
+  flex: 0 0 34px;
   padding: 0 10px;
+  height: 34px;
+  white-space: nowrap;
   cursor: pointer;
-  opacity: .5;
+  opacity: 0.5;
   transition: opacity 300ms;
+  background-image: url(./exit.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
 }
 
 .user__logout:hover {

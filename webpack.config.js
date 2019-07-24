@@ -33,5 +33,6 @@ module.exports = {
   ],
   devServer: {
     contentBase: './dist',
+    https: true,
   },
 };

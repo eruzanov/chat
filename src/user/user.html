@@ -1,4 +1,5 @@
 <div class="user">
-  <img class="user__picture" src="./user.svg" alt="" />
-  <div class="user__logout" ng-click="$ctrl.onLogout()">log out</div>
+  <img class="user__picture" alt="" src="user.svg" ng-src="{{avatar}}" />
+  <div class="user__name">{{$root.user.display_name}}</div>
+  <div class="user__logout" ng-click="$ctrl.onLogout()" title="log out"></div>
 </div>
