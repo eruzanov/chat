@@ -1,0 +1,43 @@
+.login__screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url(http://lorempixel.com/800/400/nature/);
+  background-position: center;
+  background-size: cover;
+}
+
+.login__form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login__title {
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  text-align: center;
+  font-size: 4em;
+  color: white;
+}
+
+.login__button {
+  padding: 0 50px;
+  font-size: 18px;
+  line-height: 40px;
+  text-transform: uppercase;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  transition-property: background-color, color;
+  transition-duration: 300ms;
+}
+
+.login__button:hover {
+  background-color: white;
+  color: black;
+}

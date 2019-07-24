@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/bootstrap.js',
   output: {
-    filename: 'app.js',
+    filename: 'build.js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -18,16 +18,20 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader'],
+      },
     ],
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      favicon: './src/favicon.png'
+      favicon: './src/favicon.png',
     }),
   ],
   devServer: {
-    contentBase: './dist'
-  }
+    contentBase: './dist',
+  },
 };

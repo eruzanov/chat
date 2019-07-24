@@ -1,0 +1,23 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.user__picture {
+  margin: 0 10px;
+  width: 34px;
+  height: 34px;
+}
+
+.user__logout {
+  padding: 0 10px;
+  cursor: pointer;
+  opacity: .5;
+  transition: opacity 300ms;
+}
+
+.user__logout:hover {
+  opacity: 1;
+}

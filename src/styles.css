@@ -4,59 +4,19 @@ body {
 }
 
 body {
-  display: flex;
   margin: 0;
   font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Tahoma, Arial,
     sans-serif;
 }
 
-.sidebar {
-  width: 15%;
-  overflow: scroll;
-  background-color: #5c2018;
-  color: white;
-}
-
-.main {
+.screen {
   display: flex;
-  flex-direction: column;
-  width: 85%;
+  height: 100%;
 }
 
-.main__header {
-  padding: 0 20px;
-  height: 40px;
-  border-bottom: 1px solid;
-  text-align: center;
-  line-height: 40px;
-}
-
-.main__header-title {
-  margin: 0;
-  text-transform: capitalize;
-}
-
-.main__messages {
-  flex: 1;
-  overflow: scroll;
-}
-
-.main__send {
-  padding: 10px 20px;
-}
-
-.form {
+.screen--center {
   display: flex;
-  border: 2px solid #d4a59a;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.form__input {
-  flex: 1;
-  padding: 5px 10px;
-  height: 30px;
-  border: none;
-  outline: none;
-  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

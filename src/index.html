@@ -4,26 +4,8 @@
     <meta charset="UTF-8" />
     <title>chat</title>
   </head>
-  <body ng-app="app">
-    <div class="sidebar">
-      <chat-list></chat-list>
-    </div>
-    <div class="main">
-      <div class="main__header" ng-controller="header">
-        <h2 class="main__header-title">{{$root.selected}}</h2>
-      </div>
-      <div class="main__messages">
-        <messages-list></messages-list>
-      </div>
-      <div class="main__send">
-        <form class="form">
-          <input
-            class="form__input"
-            type="text"
-            placeholder="write to message"
-          />
-        </form>
-      </div>
-    </div>
+  <body ng-app="bootstrap" ng-switch="$root.user">
+    <app class="screen" ng-switch-when="true"></app>
+    <login-form class="screen" ng-switch-default></login-form>
   </body>
 </html>
