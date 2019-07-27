@@ -6,13 +6,13 @@ const APP_ID = '3d6a2058bee1415daee6165b1b534dd3';
 
 export const moduleName = angular.module('login', []).component('loginForm', {
   template,
-  controller: [
-    function() {
+  controller: ['$window',
+    function($window) {
       this.onLogin = () => {
-        open(
+        $window.open(
           `https://oauth.yandex.ru/authorize?response_type=token&client_id=${APP_ID}`,
         );
-        close();
+        $window.close();
       };
     },
   ],

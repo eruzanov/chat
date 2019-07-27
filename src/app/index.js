@@ -7,8 +7,4 @@ import './app.css';
 
 export const moduleName = angular
   .module('app', [user, messages, chat])
-  .component('app', {
-    template,
-    controller: ['$rootScope', () => {}],
-  })
-  .name;
+  .component('app', { template }).name;
